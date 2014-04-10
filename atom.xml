@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:18:41+03:00</updated>
+  <updated>2014-04-11T00:19:34+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,7 +18,15 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/11/mac-os-x-mavericks-plus-ppfmn/"/>
     <updated>2014-04-11T00:14:20+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/11/mac-os-x-mavericks-plus-ppfmn</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Норм статья, я тоже юзаю: <a href="http://habrahabr.ru/post/217245/">http://habrahabr.ru/post/217245/</a>
+Для тех кто занимается порно и юзает ports, ребята &ndash; не страдайте хуйней, <a href="http://brew.sh/">http://brew.sh/</a> &ndash; решение для крутых чуваков.</p>
+
+<p>Так же еще есть вариант установить сразу несколько версий php:</p>
+
+<script src="https://gist.github.com/dutchakdev/10410780.js"></script>
+
+
+<p>алиасы для динамической смены в комплекте ;)</p>
 ]]></content>
   </entry>
   
