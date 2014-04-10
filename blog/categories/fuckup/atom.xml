@@ -1,4 +1,24 @@
-<h3>weua.info, ukrface.net, druzi.org.ua &ndash; это не реклама, потому как нечего рекламировать.</h3>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Fuckup | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/fuckup/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-11T00:18:41+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[О новых соц. сетях]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/01/o-novykh-sots-sietiakh/"/>
+    <updated>2014-04-01T00:11:32+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/01/o-novykh-sots-sietiakh</id>
+    <content type="html"><![CDATA[<h3>weua.info, ukrface.net, druzi.org.ua &ndash; это не реклама, потому как нечего рекламировать.</h3>
 
 <p>Иногда поражает как люди любят зарабатывать на проблемах других людей.</p>
 
@@ -15,3 +35,7 @@
 <p>А &ldquo;этих&rdquo; есть только обещание что они не передадут ваши данные третим лицам когда простой ddos не могут удержать.</p>
 
 <p>Используйте facebook, не страдайте херней.</p>
+]]></content>
+  </entry>
+  
+</feed>

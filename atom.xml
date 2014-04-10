@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:17:18+03:00</updated>
+  <updated>2014-04-11T00:18:41+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -40,31 +40,6 @@
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137199203&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[O Novykh Sots Sietiakh]]></title>
-    <link href="http://dutchakdev.github.io/blog/2014/04/11/o-novykh-sots-sietiakh/"/>
-    <updated>2014-04-11T00:00:00+03:00</updated>
-    <id>http://dutchakdev.github.io/blog/2014/04/11/o-novykh-sots-sietiakh</id>
-    <content type="html"><![CDATA[<h3>weua.info, ukrface.net, druzi.org.ua &ndash; это не реклама, потому как нечего рекламировать.</h3>
-
-<p>Иногда поражает как люди любят зарабатывать на проблемах других людей.</p>
-
-<!-- more -->
-
-
-<p>Безсомненно, бойкот действует и не стоит поддерижвать окупанта, но для этого достаточно использовать <code>facebook</code>
-ведь она подходит по всем стандартам:
-&ndash; США не помагает и не будет помагать кремлю
-&ndash; Есть все для удобного общения, в том числе моб приложения, моб версия и тд&hellip;
-&ndash; Фейсбук почему-то не достаточно привлекателен для тролей, или просто это мне везет, хотя может они ним пользоваться не умеют.
-&ndash; Многие гост. чиновники, знаменитые люди есть в фейсбуке, есть что почитать.</p>
-
-<p>А &ldquo;этих&rdquo; есть только обещание что они не передадут ваши данные третим лицам когда простой ddos не могут удержать.</p>
-
-<p>Используйте facebook, не страдайте херней.</p>
 ]]></content>
   </entry>
   
@@ -135,6 +110,31 @@
     <id>http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x</id>
     <content type="html"><![CDATA[<script src="https://gist.github.com/dutchakdev/9910572.js"></script>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[О новых соц. сетях]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/01/o-novykh-sots-sietiakh/"/>
+    <updated>2014-04-01T00:11:32+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/01/o-novykh-sots-sietiakh</id>
+    <content type="html"><![CDATA[<h3>weua.info, ukrface.net, druzi.org.ua &ndash; это не реклама, потому как нечего рекламировать.</h3>
+
+<p>Иногда поражает как люди любят зарабатывать на проблемах других людей.</p>
+
+<!-- more -->
+
+
+<p>Безсомненно, бойкот действует и не стоит поддерижвать окупанта, но для этого достаточно использовать <code>facebook</code>
+ведь она подходит по всем стандартам:
+&ndash; США не помагает и не будет помагать кремлю
+&ndash; Есть все для удобного общения, в том числе моб приложения, моб версия и тд&hellip;
+&ndash; Фейсбук почему-то не достаточно привлекателен для тролей, или просто это мне везет, хотя может они ним пользоваться не умеют.
+&ndash; Многие гост. чиновники, знаменитые люди есть в фейсбуке, есть что почитать.</p>
+
+<p>А &ldquo;этих&rdquo; есть только обещание что они не передадут ваши данные третим лицам когда простой ddos не могут удержать.</p>
+
+<p>Используйте facebook, не страдайте херней.</p>
 ]]></content>
   </entry>
   
