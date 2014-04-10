@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:55:40+03:00</updated>
+  <updated>2014-04-11T01:00:21+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,7 +18,9 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/"/>
     <updated>2014-04-05T00:14:10+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti</id>
-    <content type="html"><![CDATA[<p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
+    <content type="html"><![CDATA[<p>{% img /images/hipstercat.jpg %}</p>
+
+<p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
 
 <!-- more -->
 
