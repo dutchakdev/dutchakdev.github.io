@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:09:56+03:00</updated>
+  <updated>2014-04-11T00:17:18+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,131 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mac OS X Mavericks + PPFMN]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/mac-os-x-mavericks-plus-ppfmn/"/>
+    <updated>2014-04-11T00:14:20+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/mac-os-x-mavericks-plus-ppfmn</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Был обычный солничный день.]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien%27/"/>
+    <updated>2014-04-11T00:14:15+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien&#8217;</id>
+    <content type="html"><![CDATA[<p><a href="http://heartbleed.com/">http://heartbleed.com/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Для любителей Happy Hardcore]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/dlia-liubitieliei-happy-hardcore/"/>
+    <updated>2014-04-11T00:10:11+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/dlia-liubitieliei-happy-hardcore</id>
+    <content type="html"><![CDATA[<p>Вкусный сет для работы</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/137199203&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[O Novykh Sots Sietiakh]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/o-novykh-sots-sietiakh/"/>
+    <updated>2014-04-11T00:00:00+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/o-novykh-sots-sietiakh</id>
+    <content type="html"><![CDATA[<h3>weua.info, ukrface.net, druzi.org.ua &ndash; это не реклама, потому как нечего рекламировать.</h3>
+
+<p>Иногда поражает как люди любят зарабатывать на проблемах других людей.</p>
+
+<!-- more -->
+
+
+<p>Безсомненно, бойкот действует и не стоит поддерижвать окупанта, но для этого достаточно использовать <code>facebook</code>
+ведь она подходит по всем стандартам:
+&ndash; США не помагает и не будет помагать кремлю
+&ndash; Есть все для удобного общения, в том числе моб приложения, моб версия и тд&hellip;
+&ndash; Фейсбук почему-то не достаточно привлекателен для тролей, или просто это мне везет, хотя может они ним пользоваться не умеют.
+&ndash; Многие гост. чиновники, знаменитые люди есть в фейсбуке, есть что почитать.</p>
+
+<p>А &ldquo;этих&rdquo; есть только обещание что они не передадут ваши данные третим лицам когда простой ddos не могут удержать.</p>
+
+<p>Используйте facebook, не страдайте херней.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git-tips или не много о чистоте и безопасности]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/"/>
+    <updated>2014-04-05T00:14:10+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti</id>
+    <content type="html"><![CDATA[<p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
+
+<!-- more -->
+
+
+<ul>
+<li><p>Ну вопервых, правило <strong>№1</strong> &ndash; <code>Сделал фичу - закомичу</code>. Странно, но я как-то этот момент все время упускаю, и после недавней практики когда мне нужно было
+использовать замечательную фишу гита <strong>cherry-pick</strong> для разрешения одной проблемы, я понял что теперь все изменится. Так же главное что бы коментарий к комиту нес важную информацию, где у многих возникают проблемы на данном этапе, этого стоит избегать.</p></li>
+<li><p>Если фича разрабатывается долгий период времени в отдельной ветке &ndash; почаще стягивайте себе мастер. Это можно сделать либо простым pull:
+<code>git pull origin master</code>
+либо merge
+<code>git merge origin/master</code></p></li>
+<li><p>Для мержа фичи в мастер используйте
+<code>git merge --no-ff featureBranch</code>
+Флаг <code>--no-ff</code> cоздает merge-коммит, даже если технически этого можно избежать. Merge-коммиты очень полезны, так как содержат важную информацию:</p>
+
+<ul>
+<li>коммиты, относящиеся к этой фиче, остаются сгруппированными</li>
+<li>когда и кем было выполнено слияние</li>
+<li>откуда пришли изменения (в нашем случае из ветки «featureBranch»)</li>
+</ul>
+</li>
+<li><p>Для соблюдения порядка и наведения чистоты незабываем делать следующие вещи:</p>
+
+<ul>
+<li>Перед каждым пушем делайте: <code>git rebase -i @{u}</code>
+
+<ul>
+<li>Комманда переписывает только локальные коммиты, которые вы собираетесь запушить, хотя rebase&#8217;ом так же не стоит увлекатся</li>
+</ul>
+</li>
+<li>Удаляйте не нужные ветки</li>
+<li>Важно иметь схему именований новых веток. Как вариант использовать уникальные идентификаторы из баг-трекера, и делать что-то типа <code>feature-777</code> или <code>hotfix-123</code>. Одна задача &ndash; одна ветка.</li>
+<li><code>git pull --rebase</code> вместо простого <code>git pull</code></li>
+</ul>
+</li>
+<li><p>Очень важное правило: чем меньше вы используете &ldquo;полезных программ&rdquo; для работы с гитом &ndash; тем меньше у вас проблем. Ну и все таки, вам нужно то всего пару команд запомнить, стоит ли для этого ставить какой-то софт?</p>
+
+<p>  Так-же важно понимать, что используя гит в консоли &ndash; <strong>ты начинаешь понимать внутренюю кухню</strong>, как все просиходит, что в будущем очень помагает с решениями достаточно сложных задач при работе в команде.</p></li>
+<li><p>И последнее: <strong>Маленький мальчик пушил в мастер и помер</strong>.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PHP Ninja Wanted]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/01/php-ninja-wanted/"/>
+    <updated>2014-04-01T00:13:59+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/01/php-ninja-wanted</id>
+    <content type="html"><![CDATA[<p>Мои друзья открыли вакансию <code>PHP Developer Senior / Middle</code>
+<a href="http://jobs.dou.ua/companies/rioua/vacancies/11016/">Читать подробней</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing REE on Mac OS X]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x/"/>
+    <updated>2014-04-01T00:12:32+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x</id>
+    <content type="html"><![CDATA[<script src="https://gist.github.com/dutchakdev/9910572.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NGINX + Nodjs]]></title>

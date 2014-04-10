@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>NGINX + Nodjs - Dutchakdev</title>
+  <title>Git-tips или не много о чистоте и безопасности - Dutchakdev</title>
   <meta name="author" content="Roman Dutchak">
 
   
-  <meta name="description" content="Вообще, nodjs отлично справляется в роли веб сервера, как показала практика то на ровне как минимум. Но иногда нужно или просто нет друго выбора ( &hellip;">
+  <meta name="description" content="Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs">
+  <link rel="canonical" href="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Dutchakdev" type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">NGINX + Nodjs</h1>
+      <h1 class="entry-title">Git-tips или не много о чистоте и безопасности</h1>
     
     
       <p class="meta">
@@ -84,7 +84,7 @@
   
 
 
-<time datetime="2014-03-29T23:07:57+02:00" pubdate data-updated="true">Mar 29<span>th</span>, 2014</time>
+<time datetime="2014-04-05T00:14:10+03:00" pubdate data-updated="true">Apr 5<span>th</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://dutchakdev.github.io">Comments</a>
@@ -94,17 +94,48 @@
   </header>
 
 
-<div class="entry-content"><p>Вообще, nodjs отлично справляется в роли веб сервера, как показала практика то на ровне как минимум. Но иногда нужно или просто нет друго выбора (если 80 порт занят nginx) как использовать сторонний веб сервер.</p>
+<div class="entry-content"><p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
 
 <!-- more -->
 
 
-<p>Так как я адепт nginx и не признаю apache (не буду даже заводить разговор о своем выборе), то сделаю не большую заметку о том как проксировать, к примеру на <code>80</code> порт простенький сервер на <code>nodjs</code></p>
+<ul>
+<li><p>Ну вопервых, правило <strong>№1</strong> &ndash; <code>Сделал фичу - закомичу</code>. Странно, но я как-то этот момент все время упускаю, и после недавней практики когда мне нужно было
+использовать замечательную фишу гита <strong>cherry-pick</strong> для разрешения одной проблемы, я понял что теперь все изменится. Так же главное что бы коментарий к комиту нес важную информацию, где у многих возникают проблемы на данном этапе, этого стоит избегать.</p></li>
+<li><p>Если фича разрабатывается долгий период времени в отдельной ветке &ndash; почаще стягивайте себе мастер. Это можно сделать либо простым pull:
+<code>git pull origin master</code>
+либо merge
+<code>git merge origin/master</code></p></li>
+<li><p>Для мержа фичи в мастер используйте
+<code>git merge --no-ff featureBranch</code>
+Флаг <code>--no-ff</code> cоздает merge-коммит, даже если технически этого можно избежать. Merge-коммиты очень полезны, так как содержат важную информацию:</p>
 
-<script src="https://gist.github.com/dutchakdev/9878681.js"></script>
+<ul>
+<li>коммиты, относящиеся к этой фиче, остаются сгруппированными</li>
+<li>когда и кем было выполнено слияние</li>
+<li>откуда пришли изменения (в нашем случае из ветки «featureBranch»)</li>
+</ul>
+</li>
+<li><p>Для соблюдения порядка и наведения чистоты незабываем делать следующие вещи:</p>
 
+<ul>
+<li>Перед каждым пушем делайте: <code>git rebase -i @{u}</code>
 
-<p>На самом деле ничего сложно и возможно я написал о очевидных вещах, но буквально год назад, когда я только знакомился с nodjs вопрос сплывал.</p>
+<ul>
+<li>Комманда переписывает только локальные коммиты, которые вы собираетесь запушить, хотя rebase&#8217;ом так же не стоит увлекатся</li>
+</ul>
+</li>
+<li>Удаляйте не нужные ветки</li>
+<li>Важно иметь схему именований новых веток. Как вариант использовать уникальные идентификаторы из баг-трекера, и делать что-то типа <code>feature-777</code> или <code>hotfix-123</code>. Одна задача &ndash; одна ветка.</li>
+<li><code>git pull --rebase</code> вместо простого <code>git pull</code></li>
+</ul>
+</li>
+<li><p>Очень важное правило: чем меньше вы используете &ldquo;полезных программ&rdquo; для работы с гитом &ndash; тем меньше у вас проблем. Ну и все таки, вам нужно то всего пару команд запомнить, стоит ли для этого ставить какой-то софт?</p>
+
+<p>  Так-же важно понимать, что используя гит в консоли &ndash; <strong>ты начинаешь понимать внутренюю кухню</strong>, как все просиходит, что в будущем очень помагает с решениями достаточно сложных задач при работе в команде.</p></li>
+<li><p>И последнее: <strong>Маленький мальчик пушил в мастер и помер</strong>.</p></li>
+</ul>
+
 </div>
 
 
@@ -127,12 +158,12 @@
   
 
 
-<time datetime="2014-03-29T23:07:57+02:00" pubdate data-updated="true">Mar 29<span>th</span>, 2014</time>
+<time datetime="2014-04-05T00:14:10+03:00" pubdate data-updated="true">Apr 5<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/nginx/'>nginx,</a>, <a class='category' href='/blog/categories/nodejs/'>nodejs</a>, <a class='category' href='/blog/categories/server-side/'>server-side,</a>
+    <a class='category' href='/blog/categories/git/'>git</a>
   
 </span>
 
@@ -141,7 +172,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs/" data-via="dutchakdev" data-counturl="http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/" data-via="dutchakdev" data-counturl="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -154,10 +185,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/29/piervyi-post/" title="Previous Post: Первый пост">&laquo; Первый пост</a>
+        <a class="basic-alignment left" href="/blog/2014/04/01/php-ninja-wanted/" title="Previous Post: PHP ninja wanted">&laquo; PHP ninja wanted</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/04/01/installing-ree-on-mac-os-x/" title="Next Post: Installing REE on Mac OS X">Installing REE on Mac OS X &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/04/11/o-novykh-sots-sietiakh/" title="Next Post: O Novykh Sots Sietiakh">O Novykh Sots Sietiakh &raquo;</a>
       
     </p>
   </footer>
@@ -252,8 +283,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs/';
-        var disqus_url = 'http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs/';
+        var disqus_identifier = 'http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/';
+        var disqus_url = 'http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/';
         var disqus_script = 'embed.js';
       
     (function () {

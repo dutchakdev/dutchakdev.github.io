@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Security | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/security/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-11T00:17:18+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Был обычный солничный день.]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien%27/"/>
+    <updated>2014-04-11T00:14:15+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien'</id>
+    <content type="html"><![CDATA[<p><a href="http://heartbleed.com/">http://heartbleed.com/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

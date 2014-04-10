@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Job | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/job/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-11T00:17:18+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PHP Ninja Wanted]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/01/php-ninja-wanted/"/>
+    <updated>2014-04-01T00:13:59+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/01/php-ninja-wanted</id>
+    <content type="html"><![CDATA[<p>Мои друзья открыли вакансию <code>PHP Developer Senior / Middle</code>
+<a href="http://jobs.dou.ua/companies/rioua/vacancies/11016/">Читать подробней</a></p>
+]]></content>
+  </entry>
+  
+</feed>

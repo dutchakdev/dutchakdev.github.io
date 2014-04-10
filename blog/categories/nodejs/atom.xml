@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nodejs | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-11T00:17:18+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NGINX + Nodjs]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs/"/>
+    <updated>2014-03-29T23:07:57+02:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs</id>
+    <content type="html"><![CDATA[<p>Вообще, nodjs отлично справляется в роли веб сервера, как показала практика то на ровне как минимум. Но иногда нужно или просто нет друго выбора (если 80 порт занят nginx) как использовать сторонний веб сервер.</p>
+
+<!-- more -->
+
+
+<p>Так как я адепт nginx и не признаю apache (не буду даже заводить разговор о своем выборе), то сделаю не большую заметку о том как проксировать, к примеру на <code>80</code> порт простенький сервер на <code>nodjs</code></p>
+
+<script src="https://gist.github.com/dutchakdev/9878681.js"></script>
+
+
+<p>На самом деле ничего сложно и возможно я написал о очевидных вещах, но буквально год назад, когда я только знакомился с nodjs вопрос сплывал.</p>
+]]></content>
+  </entry>
+  
+</feed>

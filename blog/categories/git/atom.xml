@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-11T00:17:18+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Git-tips или не много о чистоте и безопасности]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/"/>
+    <updated>2014-04-05T00:14:10+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti</id>
+    <content type="html"><![CDATA[<p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
+
+<!-- more -->
+
+
+<ul>
+<li><p>Ну вопервых, правило <strong>№1</strong> &ndash; <code>Сделал фичу - закомичу</code>. Странно, но я как-то этот момент все время упускаю, и после недавней практики когда мне нужно было
+использовать замечательную фишу гита <strong>cherry-pick</strong> для разрешения одной проблемы, я понял что теперь все изменится. Так же главное что бы коментарий к комиту нес важную информацию, где у многих возникают проблемы на данном этапе, этого стоит избегать.</p></li>
+<li><p>Если фича разрабатывается долгий период времени в отдельной ветке &ndash; почаще стягивайте себе мастер. Это можно сделать либо простым pull:
+<code>git pull origin master</code>
+либо merge
+<code>git merge origin/master</code></p></li>
+<li><p>Для мержа фичи в мастер используйте
+<code>git merge --no-ff featureBranch</code>
+Флаг <code>--no-ff</code> cоздает merge-коммит, даже если технически этого можно избежать. Merge-коммиты очень полезны, так как содержат важную информацию:</p>
+
+<ul>
+<li>коммиты, относящиеся к этой фиче, остаются сгруппированными</li>
+<li>когда и кем было выполнено слияние</li>
+<li>откуда пришли изменения (в нашем случае из ветки «featureBranch»)</li>
+</ul>
+</li>
+<li><p>Для соблюдения порядка и наведения чистоты незабываем делать следующие вещи:</p>
+
+<ul>
+<li>Перед каждым пушем делайте: <code>git rebase -i @{u}</code>
+
+<ul>
+<li>Комманда переписывает только локальные коммиты, которые вы собираетесь запушить, хотя rebase'ом так же не стоит увлекатся</li>
+</ul>
+</li>
+<li>Удаляйте не нужные ветки</li>
+<li>Важно иметь схему именований новых веток. Как вариант использовать уникальные идентификаторы из баг-трекера, и делать что-то типа <code>feature-777</code> или <code>hotfix-123</code>. Одна задача &ndash; одна ветка.</li>
+<li><code>git pull --rebase</code> вместо простого <code>git pull</code></li>
+</ul>
+</li>
+<li><p>Очень важное правило: чем меньше вы используете &ldquo;полезных программ&rdquo; для работы с гитом &ndash; тем меньше у вас проблем. Ну и все таки, вам нужно то всего пару команд запомнить, стоит ли для этого ставить какой-то софт?</p>
+
+<p>  Так-же важно понимать, что используя гит в консоли &ndash; <strong>ты начинаешь понимать внутренюю кухню</strong>, как все просиходит, что в будущем очень помагает с решениями достаточно сложных задач при работе в команде.</p></li>
+<li><p>И последнее: <strong>Маленький мальчик пушил в мастер и помер</strong>.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
