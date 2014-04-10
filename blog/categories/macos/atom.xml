@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Macos | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/macos/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:21:00+03:00</updated>
+  <updated>2014-04-11T00:41:29+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,8 +18,11 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x/"/>
     <updated>2014-04-01T00:12:32+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x</id>
-    <content type="html"><![CDATA[<script src="https://gist.github.com/dutchakdev/9910572.js"></script>
-
+    <content type="html"><![CDATA[<p><code>shell
+brew install readline
+brew link readline
+CFLAGS='-I/usr/local/include' LDFLAGS='-L/usr/local/lib' rvm install ree
+</code></p>
 ]]></content>
   </entry>
   

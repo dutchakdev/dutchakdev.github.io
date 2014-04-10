@@ -57,6 +57,8 @@
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/job">Job</a></li>
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
@@ -101,7 +103,38 @@
 
 <p>Так как я адепт nginx и не признаю apache (не буду даже заводить разговор о своем выборе), то сделаю не большую заметку о том как проксировать, к примеру на <code>80</code> порт простенький сервер на <code>nodjs</code></p>
 
-<script src="https://gist.github.com/dutchakdev/9878681.js"></script>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">server</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span><span class='line'>  <span class="kn">server_name</span> <span class="s">domain</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kn">proxy_pass</span> <span class="s">http://localhost:8888/</span><span class="p">;</span>
+</span><span class='line'>      <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+</span><span class='line'>      <span class="kn">proxy_buffering</span> <span class="no">off</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>На самом деле ничего сложно и возможно я написал о очевидных вещах, но буквально год назад, когда я только знакомился с nodjs вопрос сплывал.</p>

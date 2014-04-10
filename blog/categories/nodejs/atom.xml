@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Nodejs | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:21:00+03:00</updated>
+  <updated>2014-04-11T00:41:29+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -25,8 +25,27 @@
 
 <p>Так как я адепт nginx и не признаю apache (не буду даже заводить разговор о своем выборе), то сделаю не большую заметку о том как проксировать, к примеру на <code>80</code> порт простенький сервер на <code>nodjs</code></p>
 
-<script src="https://gist.github.com/dutchakdev/9878681.js"></script>
+<p>```nginx
+server {</p>
 
+<pre><code>    listen 80;
+server_name domain;
+
+    location / {
+    proxy_pass http://localhost:8888/;
+    proxy_set_header Host $host;
+    proxy_buffering off;
+    }
+</code></pre>
+
+<p>}
+```</p>
+
+<p><code>javascript
+var http = require("http");
+var server = http.createServer();
+server.listen(8888);
+</code></p>
 
 <p>На самом деле ничего сложно и возможно я написал о очевидных вещах, но буквально год назад, когда я только знакомился с nodjs вопрос сплывал.</p>
 ]]></content>
