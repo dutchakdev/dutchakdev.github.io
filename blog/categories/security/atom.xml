@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Security | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/security/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T01:25:18+03:00</updated>
+  <updated>2014-04-11T01:28:05+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,8 +18,8 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien%27/"/>
     <updated>2014-04-11T00:14:15+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien'</id>
-    <content type="html"><![CDATA[<p>{% img {{root_url}} /images/heartbleed.png %}
-<img src="{{ root_url }}/images/heartbleed.png" /></p>
+    <content type="html"><![CDATA[<p><img class="{{root_url}}" src="/images/heartbleed.png">
+<img src="/images/heartbleed.png" /></p>
 
 <p><a href="http://heartbleed.com/">http://heartbleed.com/</a></p>
 ]]></content>

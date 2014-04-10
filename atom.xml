@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T00:39:52+03:00</updated>
+  <updated>2014-04-11T01:28:05+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/octopress/"/>
+    <updated>2014-04-11T01:20:22+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/octopress</id>
+    <content type="html"><![CDATA[<p>Не успел я создать очередной свой блог и уже переехал О_о
+Вообще частенько люблю что-то кардинально менять в своей жизни,
+темболее на то что давно уже заглядывался.</p>
+
+<p>GHost не плохая блого-платформа, но честно говоря не доконца понял почему она сорвала такой
+куш на кикстартере, ничего особенного, кроме того что он написан на <code>nodjs</code> &ndash; нет.
+Полетаем пока на <code>octopress</code>, посмотрим, думаю на ней и останусь, в первую очередь из-за markdown.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mac OS X Mavericks + PPFMN]]></title>
@@ -29,12 +44,12 @@
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew update
-</span><span class='line'>brew upgrade
-</span><span class='line'>brew tap homebrew/dupes
-</span><span class='line'>brew tap josegonzalez/homebrew-php
-</span><span class='line'>brew install freetype jpeg libpng gd zlib openssl unixodbc
-</span><span class='line'>brew install php55
+</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">brew</span> <span class="s">update</span>
+</span><span class='line'><span class="s">brew</span> <span class="s">upgrade</span>
+</span><span class='line'><span class="s">brew</span> <span class="s">tap</span> <span class="s">homebrew/dupes</span>
+</span><span class='line'><span class="s">brew</span> <span class="s">tap</span> <span class="s">josegonzalez/homebrew-php</span>
+</span><span class='line'><span class="s">brew</span> <span class="s">install</span> <span class="s">freetype</span> <span class="s">jpeg</span> <span class="s">libpng</span> <span class="s">gd</span> <span class="s">zlib</span> <span class="s">openssl</span> <span class="s">unixodbc</span>
+</span><span class='line'><span class="s">brew</span> <span class="s">install</span> <span class="s">php55</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -47,7 +62,10 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien%27/"/>
     <updated>2014-04-11T00:14:15+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/11/byl-obychnyi-solnichnyi-dien&#8217;</id>
-    <content type="html"><![CDATA[<p><a href="http://heartbleed.com/">http://heartbleed.com/</a></p>
+    <content type="html"><![CDATA[<p><img class="{{root_url}}" src="http://dutchakdev.github.io/images/heartbleed.png">
+<img src="http://dutchakdev.github.io/images/heartbleed.png" /></p>
+
+<p><a href="http://heartbleed.com/">http://heartbleed.com/</a></p>
 ]]></content>
   </entry>
   
@@ -68,7 +86,9 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti/"/>
     <updated>2014-04-05T00:14:10+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/05/git-tips-ili-nie-mnogho-o-chistotie-i-biezopasnosti</id>
-    <content type="html"><![CDATA[<p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
+    <content type="html"><![CDATA[<p><img src="http://dutchakdev.github.io/images/hipstercat.jpg"></p>
+
+<p>Сегодня пересмотрел свои некоторые действия при работе с проектом и пришел к некоторым интересным вещам, а так-же подчеркнул для себя несколько важных методик, с которыми сейчас буду с вами делится.</p>
 
 <!-- more -->
 
@@ -128,7 +148,13 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x/"/>
     <updated>2014-04-01T00:12:32+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/01/installing-ree-on-mac-os-x</id>
-    <content type="html"><![CDATA[<script src="https://gist.github.com/dutchakdev/9910572.js"></script>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">brew</span> <span class="s">install</span> <span class="s">readline</span>
+</span><span class='line'><span class="s">brew</span> <span class="s">link</span> <span class="s">readline</span>
+</span><span class='line'><span class="s">CFLAGS=&#39;-I/usr/local/include&#39;</span> <span class="s">LDFLAGS=&#39;-L/usr/local/lib&#39;</span> <span class="s">rvm</span> <span class="s">install</span> <span class="s">ree</span>
+</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
