@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Links | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/links/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T01:11:38+03:00</updated>
+  <updated>2014-04-12T01:13:05+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,7 +18,10 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/12/nodejs-s-chiegho-nachat%27/"/>
     <updated>2014-04-12T00:52:38+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/12/nodejs-s-chiegho-nachat'</id>
-    <content type="html"><![CDATA[<p><img class="{{root_url}}" src="/images/nodejs.svg"></p>
+    <content type="html"><![CDATA[<div style="background-color: black;padding: 20px;">
+<img src="/images/nodejs.svg">
+</div>
+
 
 <p>Не давно начал изучать nodejs, и тут для себя нашел подборочку ссылочек.</p>
 
