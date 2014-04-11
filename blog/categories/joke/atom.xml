@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Joke | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/joke/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-11T13:32:53+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[3d Design]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/3d-design/"/>
+    <updated>2014-04-11T13:31:56+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/3d-design</id>
+    <content type="html"><![CDATA[<p><a href="http://kristina-asmus-3d.narod.ru/">Я просто оставлю это сдесь</a></p>
+]]></content>
+  </entry>
+  
+</feed>
