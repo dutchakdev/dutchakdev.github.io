@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T01:18:47+03:00</updated>
+  <updated>2014-04-12T01:19:20+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -26,8 +26,8 @@
 
 
 <ul>
-<li><a href="http://nodejs.org/">NodeJS.org</a>{:target=&ldquo;_blank&rdquo;}</li>
-<li><a href="http://www.nodebeginner.ru/">Туториал, то что нужно прочитать в первую очередь</a>{:target=&ldquo;_blank&rdquo;}</li>
+<li><a href="http://nodejs.org/">NodeJS.org</a></li>
+<li><a href="http://www.nodebeginner.ru/">Туториал, то что нужно прочитать в первую очередь</a></li>
 <li><a href="http://nodeguide.ru/doc/">Еще руководство</a></li>
 <li><a href="https://www.meteor.com/">Meteorjs &ndash; Быстрый фреймворк с низким порогом входа, получивший 11 милионов инвестиций</a></li>
 <li><a href="https://www.discovermeteor.com/">Книга по meteorjs</a> (платная)</li>
