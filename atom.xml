@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T01:16:00+03:00</updated>
+  <updated>2014-04-12T01:16:48+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -25,17 +25,16 @@
 <!-- more -->
 
 
-<pre><code>[NodeJS.org](http://nodejs.org/)
-[Туториал, то что нужно прочитать в первую очередь](http://www.nodebeginner.ru/)
-[Еще руководство](http://nodeguide.ru/doc/)
-[Meteorjs - Быстрый фреймворк с низким порогом входа, получивший 11 милионов инвестиций](https://www.meteor.com/)
-[Книга по meteorjs](https://www.discovermeteor.com/) (платная)
-[Express - MVC фреймверк node.js](http://expressjs.com/api.html)
-Уроки по express: [Раз](http://code.tutsplus.com/tutorials/introduction-to-express--net-33367), [Два](http://code.tutsplus.com/tutorials/build-a-complete-mvc-web-site-with-expressjs--net-34168), [Три](http://webapplog.com/intro-to-express-js-simple-rest-api-app-with-monk-and-mongodb/)
-[NodeJS от А до Я](http://learn.javascript.ru/nodejs-screencast)
-[Просто полезный линк](http://howtonode.org/)
-[Еще бложик](http://debuggable.com/blog)
-</code></pre>
+<p><a href="http://nodejs.org/">NodeJS.org</a>
+<a href="http://www.nodebeginner.ru/">Туториал, то что нужно прочитать в первую очередь</a>
+<a href="http://nodeguide.ru/doc/">Еще руководство</a>
+<a href="https://www.meteor.com/">Meteorjs &ndash; Быстрый фреймворк с низким порогом входа, получивший 11 милионов инвестиций</a>
+<a href="https://www.discovermeteor.com/">Книга по meteorjs</a> (платная)
+<a href="http://expressjs.com/api.html">Express &ndash; MVC фреймверк node.js</a>
+Уроки по express: <a href="http://code.tutsplus.com/tutorials/introduction-to-express--net-33367">Раз</a>, <a href="http://code.tutsplus.com/tutorials/build-a-complete-mvc-web-site-with-expressjs--net-34168">Два</a>, <a href="http://webapplog.com/intro-to-express-js-simple-rest-api-app-with-monk-and-mongodb/">Три</a>
+<a href="http://learn.javascript.ru/nodejs-screencast">NodeJS от А до Я</a>
+<a href="http://howtonode.org/">Просто полезный линк</a>
+<a href="http://debuggable.com/blog">Еще бложик</a></p>
 
 <p>Буду похду дела пополнять коллекцию, так же на днях еще сделаю подборочку по <code>RoR</code>.</p>
 ]]></content>
