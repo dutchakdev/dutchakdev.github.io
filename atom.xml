@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-11T01:33:01+03:00</updated>
+  <updated>2014-04-11T10:21:57+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,212 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Добавление нового домена в Nginx (скрипт)]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/11/dobavlieniie-novogho-domiena-v-nginx/"/>
+    <updated>2014-04-11T10:09:39+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/11/dobavlieniie-novogho-domiena-v-nginx</id>
+    <content type="html"><![CDATA[<p>Люблю писать <code>bash</code> скрипты, в них нет ничего сложного но при этом они могут решать довольно большие проблемы.
+Такой вот скрипт стоит у меня для добавления домена в <code>nginx</code>, точнее скрипт создания конфига для домена.</p>
+
+<figure class='code'><figcaption><span>Usage - nginx_domain.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>sudo ./nginx_domain.sh testdomain.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span>nginx_domain.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="c1">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#config</span>
+</span><span class='line'><span class="k">web_root=&#39;/usr/share/nginx/&#39;</span>
+</span><span class='line'><span class="s">config_dir=&#39;/etc/nginx/&#39;</span>
+</span><span class='line'><span class="s">hosts_file=&quot;/etc/hosts&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="s">if</span> <span class="s">[</span> <span class="s">-z</span> <span class="s">&quot;</span><span class="nv">$1&quot;</span> <span class="s">]</span>
+</span><span class='line'><span class="s">then</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">#user input</span>
+</span><span class='line'>        <span class="s">echo</span> <span class="s">-e</span> <span class="s">&quot;Enter</span> <span class="s">domain</span> <span class="s">name:&quot;</span>
+</span><span class='line'>        <span class="s">read</span> <span class="s">DOMAIN</span>
+</span><span class='line'>        <span class="s">echo</span> <span class="s">&quot;Creating</span> <span class="s">Nginx</span> <span class="s">domain</span> <span class="s">settings</span> <span class="s">for:</span> <span class="nv">$DOMAIN&quot;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="s">if</span> <span class="s">[</span> <span class="s">-z</span> <span class="s">&quot;</span><span class="nv">$DOMAIN&quot;</span> <span class="s">]</span>
+</span><span class='line'>        <span class="s">then</span>
+</span><span class='line'>                <span class="s">echo</span> <span class="s">&quot;Domain</span> <span class="s">required&quot;</span>
+</span><span class='line'>                <span class="s">exit</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="s">fi</span>
+</span><span class='line'><span class="s">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="s">if</span> <span class="s">[</span> <span class="s">-z</span> <span class="s">&quot;</span><span class="nv">$DOMAIN&quot;</span> <span class="s">]</span>
+</span><span class='line'><span class="s">then</span>
+</span><span class='line'>        <span class="s">DOMAIN=</span><span class="nv">$1</span>
+</span><span class='line'><span class="s">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="s">(</span>
+</span><span class='line'><span class="s">cat</span> <span class="s">&lt;&lt;EOF</span>
+</span><span class='line'><span class="s">server</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">listen</span>       <span class="mi">80</span><span class="p">;</span>
+</span><span class='line'>      <span class="kn">server_name</span>  <span class="nv">$DOMAIN.</span> <span class="s">www.</span><span class="nv">$DOMAIN</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">root</span>        <span class="nv">$web_root/$DOMAIN/public/</span><span class="p">;</span>
+</span><span class='line'>      <span class="kn">index</span>       <span class="s">index.php</span> <span class="s">index.html</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">charset</span> <span class="s">utf8</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">location</span> <span class="p">=</span> <span class="s">/favicon.ico</span> <span class="p">{</span>
+</span><span class='line'>              <span class="kn">log_not_found</span> <span class="no">off</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">location</span> <span class="p">=</span> <span class="s">/robots.txt</span> <span class="p">{</span>
+</span><span class='line'>              <span class="kn">allow</span> <span class="s">all</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">log_not_found</span> <span class="no">off</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="s">/index.php?</span><span class="nv">$query_string</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">location</span> <span class="p">~</span> <span class="sr">\.php</span> <span class="p">{</span>
+</span><span class='line'>              <span class="kn">fastcgi_pass</span>  <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">9000</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">fastcgi_index</span> <span class="s">index.php</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">fastcgi_param</span>  <span class="s">PHP_VALUE</span> <span class="s">&quot;upload_max_filesize=15M&quot;</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">fastcgi_param</span>   <span class="s">APPLICATION_ENV</span>  <span class="s">dev</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>              <span class="kn">fastcgi_param</span> <span class="s">PATH_INFO</span> <span class="nv">$fastcgi_script_name</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kn">access_log</span> <span class="nv">$web_root/$DOMAIN/log/access_log.txt</span><span class="p">;</span>
+</span><span class='line'>      <span class="kn">error_log</span> <span class="nv">$web_root/$DOMAIN/log/error_log.txt</span> <span class="s">error</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">EOF</span>
+</span><span class='line'><span class="s">)</span> <span class="s">&gt;</span>  <span class="nv">$config_dir/sites-available/$DOMAIN.conf</span>
+</span><span class='line'>
+</span><span class='line'><span class="s">(</span>
+</span><span class='line'><span class="s">cat</span> <span class="s">&lt;&lt;EOF</span>
+</span><span class='line'><span class="nv">$domain</span> <span class="mi">127</span><span class="s">.0.0.1</span>
+</span><span class='line'><span class="s">www.</span><span class="nv">$domain</span> <span class="mi">127</span><span class="s">.0.0.1</span>
+</span><span class='line'><span class="s">EOF</span>
+</span><span class='line'><span class="s">)</span> <span class="s">&gt;&gt;</span>  <span class="s">hosts_file</span>
+</span><span class='line'>
+</span><span class='line'><span class="s">echo</span> <span class="s">&quot;Making</span> <span class="s">web</span> <span class="s">directories&quot;</span>
+</span><span class='line'><span class="s">mkdir</span> <span class="s">-p</span> <span class="nv">$web_root/&quot;$DOMAIN&quot;</span>
+</span><span class='line'><span class="s">mkdir</span> <span class="s">-p</span> <span class="nv">$web_root/&quot;$DOMAIN&quot;/{public,private,log,backup}</span>
+</span><span class='line'><span class="s">ln</span> <span class="s">-s</span> <span class="nv">$config_dir/sites-available/&quot;$DOMAIN&quot;.conf</span> <span class="nv">$config_dir/sites-enabled/&quot;$DOMAIN&quot;.conf</span>
+</span><span class='line'><span class="s">/etc/init.d/nginx</span> <span class="s">reload</span>
+</span><span class='line'><span class="s">echo</span> <span class="s">&quot;Nginx</span> <span class="s">-</span> <span class="s">reload&quot;</span>
+</span><span class='line'><span class="s">chown</span> <span class="s">-R</span> <span class="s">www-data:www-data</span> <span class="nv">$web_root/&quot;$DOMAIN&quot;</span>
+</span><span class='line'><span class="s">chmod</span> <span class="mi">755</span> <span class="nv">$web_root/&quot;$DOMAIN&quot;/public</span>
+</span><span class='line'><span class="s">echo</span> <span class="s">&quot;Permissions</span> <span class="s">have</span> <span class="s">been</span> <span class="s">set&quot;</span>
+</span><span class='line'><span class="s">echo</span> <span class="s">&quot;</span><span class="nv">$DOMAIN</span> <span class="s">has</span> <span class="s">been</span> <span class="s">setup&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Конечно, скрипт подойдет не всем, все зависит от того как установлен и настроен сервер, но подкорректировать довольно просто используя переменные конфигурации, ну и если вообще не подходит то подкорректировать сам скрипт,
+так же можно задавать вопросы в коменты, всегда рад помочь.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress]]></title>
