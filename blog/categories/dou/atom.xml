@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Dou, | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/dou/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-12T13:59:17+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[UA IRC]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/12/ua-irc/"/>
+    <updated>2014-04-12T13:49:52+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/12/ua-irc</id>
+    <content type="html"><![CDATA[<p>Создал канал #dou на freenode.net.</p>
+
+<!-- more -->
+
+
+<p>Клиенты:</p>
+
+<pre><code>IRC клиенты для MacOS
+http://www.codeux.com/textual/ - Использую, мне нравится
+http://limechat.net/mac/
+http://quassel-irc.org/downloads
+
+Linux
+http://xchat.org/
+
+IRC клиенты для Windows
+http://www.mirc.com/
+http://www.silverex.org/download/
+http://quassel-irc.org/downloads
+
+Chrome
+https://chrome.google.com/webstore/detail/chrocha-irc-client-for-ch/eoajgjnmcikichkdpkjkpgoejkglinbd
+https://chrome.google.com/webstore/detail/mibbit-webchat/hbadbkkklnhamjjeagmknajgmbgcmnpi?hl=en-GB
+
+Firefox
+https://addons.mozilla.org/en-US/firefox/addon/chatzilla/
+https://addons.mozilla.org/en-US/firefox/addon/freenode-irc-client/?src=search
+
+Android
+https://play.google.com/store/apps/details?id=com.androirc&amp;hl=ru
+
+iOS
+https://itunes.apple.com/us/app/mango-lite-free-irc-chat-client/id449136259?mt=8
+https://itunes.apple.com/ru/app/dump-chat-irc-client/id647483432?mt=8
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
