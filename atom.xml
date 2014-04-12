@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T13:59:17+03:00</updated>
+  <updated>2014-04-12T17:02:46+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Установка Metasploit Framework на OS X]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/12/installing-metasploit-framewok/"/>
+    <updated>2014-04-12T14:56:15+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/12/installing-metasploit-framewok</id>
+    <content type="html"><![CDATA[<p>Очень упрощает жизнь штука под названием <a href="https://github.com/darkoperator/MSF-Installer">MSF Installer</a>
+Это простой скрипт который установит все зависимости и сам фреймворк.</p>
+
+<!-- more -->
+
+
+<p>Перед запуском нужно убедится в том что установлены</p>
+
+<ul>
+<li><a href="https://java.com/en/download/installed.jsp">java</a></li>
+<li><a href="http://brew.sh">homebres</a></li>
+<li>Command Line Development Tools</li>
+</ul>
+
+
+<p>Установка мега простая:</p>
+
+<figure class='code'><figcaption><span>Run - msf_install.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">$</span> <span class="s">chmod</span> <span class="s">+x</span> <span class="s">msf_install.sh</span>
+</span><span class='line'>$ <span class="s">./msf_install.sh</span> <span class="s">-i</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>После чего запускаем скрипт установки и обновления Armitage</p>
+
+<figure class='code'><figcaption><span>Run - msf_install.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">$</span> <span class="s">chmod</span> <span class="s">+x</span> <span class="s">msf_install.sh</span>
+</span><span class='line'>$ <span class="s">./update_armitage.sh</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Все гениальное &ndash; просто!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UA IRC]]></title>
