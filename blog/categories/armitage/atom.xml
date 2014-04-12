@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Armitage | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/armitage/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T17:02:46+03:00</updated>
+  <updated>2014-04-12T17:04:51+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -28,7 +28,7 @@
 
 <ul>
 <li><a href="https://java.com/en/download/installed.jsp">java</a></li>
-<li><a href="http://brew.sh">homebres</a></li>
+<li><a href="http://brew.sh">homebrew</a></li>
 <li>Command Line Development Tools</li>
 </ul>
 
