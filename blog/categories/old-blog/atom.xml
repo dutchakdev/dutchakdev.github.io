@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Old-blog | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/old-blog/atom.xml" rel="self"/>
+  <link href="http://dutchakdev.github.io/"/>
+  <updated>2014-04-12T17:24:53+03:00</updated>
+  <id>http://dutchakdev.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Dutchak]]></name>
+    <email><![CDATA[dutchakdev@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MALMO простая структура вашего приложения YII]]></title>
+    <link href="http://dutchakdev.github.io/blog/2013/03/26/malmo-prostaia-struktura-vashiegho-prilozhieniia-yii/"/>
+    <updated>2013-03-26T16:10:05+02:00</updated>
+    <id>http://dutchakdev.github.io/blog/2013/03/26/malmo-prostaia-struktura-vashiegho-prilozhieniia-yii</id>
+    <content type="html"><![CDATA[<p>Прошу любить и жаловать MALMO. Еще один скилет для ваших приложений.
+В отличии от bolierate он на много легче, но и работать с ним намного приятней.</p>
+
+<!-- more -->
+
+
+<p>Что уже есть внутри:</p>
+
+<ul>
+<li>Gearman worker для быстрого старата работы с gearman.</li>
+<li>Database расширения:
+
+<ul>
+<li>DbConnection емуляци nested транзацкий MySql и други баз данных которые не поддерживают это.</li>
+<li>DbCommand с фичами addWhere и queryAssoc</li>
+<li>Base ActiveRecord class. Реализация часто используемых функций &ndash; автоматическая установа полей дат в записи, установка нулевого значения, а не пустой строки.</li>
+</ul>
+</li>
+<li>Power MultiSite компонент для работы с мультисайтами.</li>
+<li>Cookie Manager компонент для организации ваших кук в одном конфиге.</li>
+<li>Base Controller с некоторыми вспомагательными методами, хелперами..</li>
+<li>Tag Caching behaviour, включен по умолчанию</li>
+<li>Unit tests для всех внутрених компонентов</li>
+</ul>
+
+
+<p>В целом штука крутая, только начал работать с ней, но мне уже нравится.
+Сама репа тут: <a href="https://github.com/sergebezborodov/malmo">https://github.com/sergebezborodov/malmo</a>
+Приложение на мелмо: <a href="https://github.com/sergebezborodov/malmo-app">https://github.com/sergebezborodov/malmo-app</a></p>
+
+<p>(Пост перенесен со старого блога)</p>
+]]></content>
+  </entry>
+  
+</feed>

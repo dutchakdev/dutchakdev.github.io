@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Автоматическая генерация кода в Yii - Dutchakdev</title>
+  <meta name="author" content="Roman Dutchak">
+
+  
+  <meta name="description" content="Несколько лет назад я познакомился с замечательным фреймворком Yii и с тех пор как только у меня появляется возможность вести проект на нем — я &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dutchakdev.github.io/blog/2013/08/25/crud-yii">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dutchakdev" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34313243-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dutchakdev</a></h1>
+  
+    <h2>Code, hacks and Rock and Roll.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dutchakdev.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/job">Job</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="http://hromadske.tv" title="Настоящая правда">hromadske</a></li>
+  <li><a href="http://pravda.com.ua" title="Настоящая правда">pravda</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Автоматическая генерация кода в Yii</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-25T17:18:33+03:00" pubdate data-updated="true">Aug 25<span>th</span>, 2013</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://dutchakdev.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Несколько лет назад я познакомился с замечательным фреймворком Yii и с тех пор как только у меня появляется возможность вести проект на нем — я <del>дерусь</del> берусь за нее.</p>
+
+<!-- more -->
+
+
+<p>Одной из крутых фич которую я очень люблю, это инструмент <code>Gii</code>, который начиная с версии 1.1.2 входит в состав фреймворка.
+Сейчас я хочу поговорить сторонних модулях основанных на нем.</p>
+
+<p><code>Gii</code> «Из коробки» генерирует достаточно функциональный код, часто когда нужно создать мелкую фичу приходится очень мало менять.
+Но что если нам нужно больше возможностей? К примеру добавить поддержку нескольких языков, или изменит стиль генерируемого кода?</p>
+
+<p>Есть 2 способа расширения: Изменять существующие шаблоны и создавать свои генераторы (ну или использовать уже готовые соответственно). На базе этих возможностей были созданы достаточно интересные продукты для комфортной работы с авто генерацией кода.</p>
+
+<p>Giix</p>
+
+<p><a href="http://www.yiiframework.com/extension/giix/">Страница расширения</a>
+Пожалуй мой самый любимый генератор. Генерирует для моделей базовый класс с кодом и отдельно пустой класс модели с унаследованием от базового. Таким образом при изменении базы можно сделать пере-генерацию без затирания своего кода.</p>
+
+<p>Также генерирует представление с учетом связей что очень часто экономит тонну времени.</p>
+
+<p>Основные фичи</p>
+
+<ul>
+<li>Улучшенная и упрощенная i18n</li>
+<li>Поддержка связей HAS_MANY и MANY_MANY.</li>
+<li>Встроенная поддержка для сохранения связей MANY_MANY при помощи нового метода GxActiveRecord::saveWithRelated.</li>
+<li>Правильная обработка связанных атрибутов моделей, рендеринг соответствующих полей формы основываясь на типе связей.</li>
+<li>Удобная структура моделей для дальнейшей работы</li>
+</ul>
+
+
+<p>Практика показала что данный генератор, при правильно спроектированной бд генерирует очень много нужного кода.</p>
+
+<p>Manymanyajaxcrudadmin</p>
+
+<p><a href="http://www.yiiframework.com/extension/manymanyajaxcrudadmin/">Страница расширения</a>
+Достаточно крутая штука. Предоставляет шаблон для генерации кода с использованием ajax в фронтенде для моделей со связками MANY_MANY. Удобно когда нужно создать сущность к примеру «продукт» или «категория».</p>
+
+<p>К примеру для продукта мы используем обычный CListView или CGridView а для категорий можем использовать nestedset, редактируемые при помощи плагина jstree.</p>
+
+<p>Все это дело редактируется в модальных диалогах, с возможностью прикреплять файлы.
+Базируется на Giix.</p>
+
+<p>Заключение</p>
+
+<p>Моделей и наборов шаблонов для генерации намного больше, я описал лишь те которые приходилось использовать и которые мне действительно нравятся.
+Идея форка для Giix не покидает меня, есть действительно хорошие идеи по-поводу данного расширения к примеру: добавить настройку типов полей перед генерацией, настройка правил, фильтров, возможно это стоит оформить как новый модуль для yii2. Время покажет.</p>
+
+<p>Это моя первая статья, до этого я умел только троллить. За троллинг и оскорбления других пользователей, ранее, прошу прощения. Советы и критику по написанию статьи прошу писать в личку, с ошибками туда-же (мой Русский плох, я знаю, работаю над этим).</p>
+
+<p>Ссылки:
+<a href="http://www.yiiframework.com/extension/manymanyajaxcrudadmin/">manymanyajaxcrudadmin</a>
+<a href="http://www.yiiframework.com/extension/giix/">giix</a>
+<a href="http://www.yiiframework.com/doc/guide/1.1/ru/topics.gii">Автоматическая генерация кода в Yii</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Roman Dutchak</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-25T17:18:33+03:00" pubdate data-updated="true">Aug 25<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/oldblog/'>oldblog</a>, <a class='category' href='/blog/categories/yii/'>yii,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dutchakdev.github.io/blog/2013/08/25/crud-yii/" data-via="dutchakdev" data-counturl="http://dutchakdev.github.io/blog/2013/08/25/crud-yii/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/26/malmo-prostaia-struktura-vashiegho-prilozhieniia-yii/" title="Previous Post: MALMO простая структура вашего приложения YII">&laquo; MALMO простая структура вашего приложения YII</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/03/29/piervyi-post/" title="Next Post: Первый пост">Первый пост &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/12/installing-metasploit-framewok/">Установка Metasploit Framework на OS X</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/12/ua-irc/">UA IRC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/12/nodejs-s-chiegho-nachat%27/">Nodejs - С чего начать?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/3d-design/">3d Design</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/11/dobavlieniie-novogho-domiena-v-nginx/">Добавление нового домена в Nginx (скрипт)</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/dutchakdev">@dutchakdev</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'dutchakdev',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+    <a href="http://www.phptherightway.com/"><img alt="php the right way" src="http://rmcreative.ru/sidebar/php_the_right_way.png" .></a>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Roman Dutchak -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dutchakdev';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dutchakdev.github.io/blog/2013/08/25/crud-yii/';
+        var disqus_url = 'http://dutchakdev.github.io/blog/2013/08/25/crud-yii/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
