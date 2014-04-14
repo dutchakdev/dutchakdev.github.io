@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T17:26:32+03:00</updated>
+  <updated>2014-04-14T19:54:08+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,219 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Обзор Benchmark Tools]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/04/14/benchmark/"/>
+    <updated>2014-04-14T12:06:21+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/04/14/benchmark</id>
+    <content type="html"><![CDATA[<p>Решил рассказать о тулзах для тестирования нугрзки которые я использую в работе.
+Сейчас конкретно пойдет речь о измерении производительности HTTP веб-серверов.
+Это не совсем обзор, скорее поверхносный, и представлю лишь 3 тулзы.</p>
+
+<!-- more -->
+
+
+<h3>AB</h3>
+
+<p>Однопоточная программа для командной строки, использующаяся для измерения производительности HTTP веб-серверов.
+Изначально разработанная для тестирования HTTP-сервера Apache, в основном подходит для тестирования любого веб-сервера.</p>
+
+<p>Если нужен простой тест по нагрузке определенной страницы (или списка) достаточно использовать ее.</p>
+
+<p>Использование:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ab -n 1000 -c 10 http://domain.com/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Сделает 1000 HTTP GET запросов, обработка до 10 запросов одновременно, к указанному URL.</p>
+
+<p>Получим примерно такой отчетик:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Server Software:        nginx
+</span><span class='line'>Server Hostname:        domain.com
+</span><span class='line'>Server Port:            80
+</span><span class='line'>
+</span><span class='line'>Document Path:          /
+</span><span class='line'>Document Length:        5 bytes
+</span><span class='line'>
+</span><span class='line'>Concurrency Level:      10
+</span><span class='line'>Time taken for tests:   26.134 seconds
+</span><span class='line'>Complete requests:      1000
+</span><span class='line'>Failed requests:        0
+</span><span class='line'>Write errors:           0
+</span><span class='line'>Total transferred:      146000 bytes
+</span><span class='line'>HTML transferred:       5000 bytes
+</span><span class='line'>Requests per second:    38.26 [#/sec] (mean)
+</span><span class='line'>Time per request:       261.342 [ms] (mean)
+</span><span class='line'>Time per request:       26.134 [ms] (mean, across all concurrent requests)
+</span><span class='line'>Transfer rate:          5.46 [Kbytes/sec] received
+</span><span class='line'>
+</span><span class='line'>Connection Times (ms)
+</span><span class='line'>              min  mean[+/-sd] median   max
+</span><span class='line'>Connect:      111  141 175.4    115    2328
+</span><span class='line'>Processing:   112  118  29.8    116     598
+</span><span class='line'>Waiting:      112  117   3.0    116     130
+</span><span class='line'>Total:        223  259 178.0    232    2445
+</span><span class='line'>
+</span><span class='line'>Percentage of the requests served within a certain time (ms)
+</span><span class='line'>  50%    232
+</span><span class='line'>  66%    234
+</span><span class='line'>  75%    235
+</span><span class='line'>  80%    236
+</span><span class='line'>  90%    240
+</span><span class='line'>  95%    243
+</span><span class='line'>  98%   1299
+</span><span class='line'>  99%   1367
+</span><span class='line'> 100%   2445 (longest request)</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Siege</h3>
+
+<p>Siege умеет выполнять многопоточное нагрузочное тестирование web-серверов по протоколу HTTP (S)/1.0/1.1 методами GET и POST.
+Утилита симулирует параллельные запросы к веб-серверу на протяжении заданного времени и в конце теста вычисляет следующие показатели:</p>
+
+<ul>
+<li>среднее количество транзакций, которые сервер смог обрабатывать одновременно.</li>
+<li>среднее время, потребовавшееся серверу для ответа;</li>
+<li>среднее количество транзакций в секунду;</li>
+<li>длительность самой долгой и самой быстрой транзакций;</li>
+<li>объём переданных данных и скорость обмена данными с сервером;</li>
+<li>количество совершённых транзакций в процессе тестирования;</li>
+<li>количество и процентное соотношение успешных/неудачных транзакций;</li>
+</ul>
+
+
+<p>Запросы к серверу утилита может выполнять как к одному и тому же URL,
+так к разным на основе списка.
+Паузы между запросами к серверу могут быть как произвольными в пределах заданного интервала, так и вовсе отсутствовать, позволяя таким образом выполнять тест производительности сервера.</p>
+
+<p>Главное отличие от <code>ab</code> это какразтаки умени &ldquo;симулировать&rdquo; реальное поведение при highload.</p>
+
+<p>Выполним запрос 1000 раз, только теперь одновременно будем отправлять по 10 запросов за раз:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ siege -b -c 10 -r 5 http://domain.com/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Если необходимо использовать список url:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ siege -d 5 -c 200 -r 5 -i -f ~/urls.txt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Результат будет таким:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Transactions:                  50 hits
+</span><span class='line'>Availability:             100.00 %
+</span><span class='line'>Elapsed time:             1.01 secs
+</span><span class='line'>Data transferred:         0.27 MB
+</span><span class='line'>Response time:                 0.12 secs
+</span><span class='line'>Transaction rate:         49.50 trans/sec
+</span><span class='line'>Throughput:                   0.26 MB/sec
+</span><span class='line'>Concurrency:              5.84
+</span><span class='line'>Successful transactions:       50
+</span><span class='line'>Failed transactions:         0
+</span><span class='line'>Longest transaction:         0.74
+</span><span class='line'>Shortest transaction:       0.06
+</span><span class='line'>
+</span><span class='line'>FILE: /usr/local/var/siege.log
+</span><span class='line'>You can disable this annoying message by editing
+</span><span class='line'>the .siegerc file in your home directory; change
+</span><span class='line'>the directive 'show-logfile' to false.
+</span><span class='line'>
+</span><span class='line'>$ cat /usr/local/var/siege.log
+</span><span class='line'>Date & Time            Trans       Elap Time       Data Trans   Resp Time   Trans Rate    Throughput   Concurrent     OKAY     Failed
+</span><span class='line'>2014-03-30 16:10:01,  2145,       38.05,          0,          0.27,       56.37,        0.00,        14.94,        2145,       0
+</span><span class='line'>2014-03-30 16:10:33,  187,        21.97,          0,          0.29,       8.51,         0.00,        2.50,        187,        0
+</span><span class='line'>2014-03-30 16:13:50,  1030,       109.48,         0,          0.27,       9.41,         0.00,        2.50,          1030,       0
+</span><span class='line'>2014-03-31 10:03:01,  1038,    15.97,          2,         0.98,       65.00,        0.13,        63.40,        1038,       0
+</span><span class='line'>2014-03-31 10:03:40,     63,         33.14,          0,        18.24,      1.90,         0.00,        34.68,      63,         37
+</span><span class='line'>2014-04-14 19:22:07,     50,         1.01,           0,           0.12,       49.50,        0.00,        5.84,        50,         0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>iperf</h3>
+
+<p>Мощнейшая кроссплатформенная консольная утилита генерирования трафика.
+С ее помощью можно легко измерить пропускную способность канала между двумя компьютерами. Iperf работает в режиме клиент-сервер.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Usage
+</span><span class='line'>$ iperf -c &lt;server IP address&gt; -b 36M -i 1 -t 20</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Для данной утилиты есть так же gui интерфейс <code>Jperf</code></p>
+
+<p>Для тестирования конкретно http серверов я использую связку siege + ab, потом делаю срезы по конкретно интересующим данным.</p>
+
+<p>Если тема будет интересна, раскажу еще других штуках для пентестов.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Установка Metasploit Framework на OS X]]></title>
