@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Benchmark, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/benchmark/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-14T19:54:08+03:00</updated>
+  <updated>2014-04-14T21:27:07+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,7 +18,7 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/14/benchmark/"/>
     <updated>2014-04-14T12:06:21+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/14/benchmark</id>
-    <content type="html"><![CDATA[<p>Решил рассказать о тулзах для тестирования нугрзки которые я использую в работе.
+    <content type="html"><![CDATA[<p>Решил рассказать о тулзах для тестирования нагрузки которые я использую в работе.
 Сейчас конкретно пойдет речь о измерении производительности HTTP веб-серверов.
 Это не совсем обзор, скорее поверхносный, и представлю лишь 3 тулзы.</p>
 
