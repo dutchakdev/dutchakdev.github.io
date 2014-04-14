@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Nodejs, | Dutchakdev]]></title>
+  <title><![CDATA[Category: Nodejs | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T17:26:32+03:00</updated>
+  <updated>2014-04-14T19:50:34+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -14,32 +14,40 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Nodejs - С чего начать?]]></title>
-    <link href="http://dutchakdev.github.io/blog/2014/04/12/nodejs-s-chiegho-nachat%27/"/>
-    <updated>2014-04-12T00:52:38+03:00</updated>
-    <id>http://dutchakdev.github.io/blog/2014/04/12/nodejs-s-chiegho-nachat'</id>
-    <content type="html"><![CDATA[<p><img src="http://dutchakdev.github.io/images/nodejs.svg" style="background-color: black;padding: 20px;"></p>
-
-<p>Не давно начал изучать nodejs, и тут для себя нашел подборочку ссылочек.</p>
+    <title type="html"><![CDATA[NGINX + Nodjs]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs/"/>
+    <updated>2014-03-29T23:07:57+02:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/03/29/nginx-plus-nodjs</id>
+    <content type="html"><![CDATA[<p>Вообще, nodjs отлично справляется в роли веб сервера, как показала практика то на ровне как минимум. Но иногда нужно или просто нет друго выбора (если 80 порт занят nginx) как использовать сторонний веб сервер.</p>
 
 <!-- more -->
 
 
-<ul>
-<li><a href="http://nodejs.org/">NodeJS.org</a></li>
-<li><a href="http://www.nodebeginner.ru/">Туториал, то что нужно прочитать в первую очередь</a></li>
-<li><a href="http://nodeguide.ru/doc/">Еще руководство</a></li>
-<li><a href="https://www.meteor.com/">Meteorjs &ndash; Быстрый фреймворк с низким порогом входа, получивший 11 милионов инвестиций</a></li>
-<li><a href="https://www.discovermeteor.com/">Книга по meteorjs</a> (платная)</li>
-<li><a href="http://expressjs.com/api.html">Express &ndash; MVC фреймверк node.js</a></li>
-<li>Уроки по express: <a href="http://code.tutsplus.com/tutorials/introduction-to-express--net-33367">Раз</a>, <a href="http://code.tutsplus.com/tutorials/build-a-complete-mvc-web-site-with-expressjs--net-34168">Два</a>, <a href="http://webapplog.com/intro-to-express-js-simple-rest-api-app-with-monk-and-mongodb/">Три</a></li>
-<li><a href="http://learn.javascript.ru/nodejs-screencast">NodeJS от А до Я</a></li>
-<li><a href="http://howtonode.org/">Просто полезный линк</a></li>
-<li><a href="http://debuggable.com/blog">Еще бложик</a></li>
-</ul>
+<p>Так как я адепт nginx и не признаю apache (не буду даже заводить разговор о своем выборе), то сделаю не большую заметку о том как проксировать, к примеру на <code>80</code> порт простенький сервер на <code>nodjs</code></p>
 
+<p>```nginx
+server {</p>
 
-<p>Буду похду дела пополнять коллекцию, так же на днях еще сделаю подборочку по <code>RoR</code>.</p>
+<pre><code>    listen 80;
+server_name domain;
+
+    location / {
+    proxy_pass http://localhost:8888/;
+    proxy_set_header Host $host;
+    proxy_buffering off;
+    }
+</code></pre>
+
+<p>}
+```</p>
+
+<p><code>javascript
+var http = require("http");
+var server = http.createServer();
+server.listen(8888);
+</code></p>
+
+<p>На самом деле ничего сложно и возможно я написал о очевидных вещах, но буквально год назад, когда я только знакомился с nodjs вопрос сплывал.</p>
 ]]></content>
   </entry>
   

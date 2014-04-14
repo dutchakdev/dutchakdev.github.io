@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Yii, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/yii/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T17:26:32+03:00</updated>
+  <updated>2014-04-14T19:50:20+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -97,7 +97,7 @@
 <ul>
 <li>DbConnection емуляци nested транзацкий MySql и други баз данных которые не поддерживают это.</li>
 <li>DbCommand с фичами addWhere и queryAssoc</li>
-<li>Base ActiveRecord class. Реализация часто используемых функций &ndash; автоматическая установа полей дат в записи, установка нулевого значения, а не пустой строки.</li>
+<li>Base ActiveRecord class. Реализация часто используемых функций - автоматическая установа полей дат в записи, установка нулевого значения, а не пустой строки.</li>
 </ul>
 </li>
 <li>Power MultiSite компонент для работы с мультисайтами.</li>
@@ -109,8 +109,8 @@
 
 
 <p>В целом штука крутая, только начал работать с ней, но мне уже нравится.
-Сама репа тут: <a href="https://github.com/sergebezborodov/malmo">https://github.com/sergebezborodov/malmo</a>
-Приложение на мелмо: <a href="https://github.com/sergebezborodov/malmo-app">https://github.com/sergebezborodov/malmo-app</a></p>
+Сама репа тут: https://github.com/sergebezborodov/malmo
+Приложение на мелмо: https://github.com/sergebezborodov/malmo-app</p>
 
 <p>(Запись востановлена со старого блога)</p>
 ]]></content>

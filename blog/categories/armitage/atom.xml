@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Armitage | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/armitage/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-12T17:26:32+03:00</updated>
+  <updated>2014-04-14T19:50:20+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -35,23 +35,19 @@
 
 <p>Установка мега простая:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Run &ndash; msf_install.sh </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">$</span> <span class="s">chmod</span> <span class="s">+x</span> <span class="s">msf_install.sh</span>
-</span><span class='line'>$ <span class="s">./msf_install.sh</span> <span class="s">-i</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Run - msf_install.sh lang:nginx %}
+$ chmod +x msf_install.sh
+$ ./msf_install.sh -i
+{% endcodeblock %}</p>
 
 <p>После чего запускаем скрипт установки и обновления Armitage</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Run &ndash; msf_install.sh </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='nginx'><span class='line'><span class="k">$</span> <span class="s">chmod</span> <span class="s">+x</span> <span class="s">msf_install.sh</span>
-</span><span class='line'>$ <span class="s">./update_armitage.sh</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Run - msf_install.sh lang:nginx %}
+$ chmod +x msf_install.sh
+$ ./update_armitage.sh
+{% endcodeblock %}</p>
 
-<p>Все гениальное &ndash; просто!</p>
+<p>Все гениальное - просто!</p>
 ]]></content>
   </entry>
   
