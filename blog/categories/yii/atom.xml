@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Yii, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/yii/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-20T15:45:43+03:00</updated>
+  <updated>2014-07-20T23:07:31+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -19,7 +19,7 @@
     <updated>2014-07-20T11:16:48+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/07/20/yii-batch</id>
     <content type="html"><![CDATA[<p>Хотел немного поиграться и посмотреть что выйдет. В yii2 есть такая крутая мега фича как batch и each.
-Юзается они так:
+Юзаются они так:
 ```php
 use yii\db\Query;</p>
 
