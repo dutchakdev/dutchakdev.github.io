@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Yii, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/yii/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-04-14T21:27:07+03:00</updated>
+  <updated>2014-07-20T15:24:59+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Пакетная обработка данных для AR YII]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/07/20/yii-batch/"/>
+    <updated>2014-07-20T11:16:48+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/07/20/yii-batch</id>
+    <content type="html"><![CDATA[<p>Хотел немного поиграться и посмотреть что выйдет. В yii2 есть такая крутая мега фича как batch и each.
+Юзается они так:
+```php
+use yii\db\Query;</p>
+
+<p>$query = (new Query)</p>
+
+<pre><code>-&gt;from('tbl_user')
+-&gt;orderBy('id');
+</code></pre>
+
+<p>foreach ($query->each() as $user) {</p>
+
+<pre><code>// $user — одна строка из tbl_user
+</code></pre>
+
+<p>}</p>
+
+<p>foreach ($query->batch(10) as $users) {</p>
+
+<pre><code>// $users — массив из 10 строк
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Конечно так красиво сделать не выйдет, да и вообще, не выйдет повторить всю суть,
+без значительных изминений в AR (новый, для версии 2 команда yii писала 2 года)
+но поигратся было интересно.</p>
+
+<p>Посмотреть что получилось можно тут: <a href="https://github.com/dutchakdev/yii-batch">https://github.com/dutchakdev/yii-batch</a>
+Репозиторий еще не дооформил, нужно написать пару тестов и пример использования
+в демо проекте.</p>
+
+<p>Сам компонент (хоть он и больше хелпер-итератор) находится тут
+<a href="https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php">https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php</a></p>
+
+<p>Вышло у мен так:</p>
+
+<p>Batch:
+```php</p>
+
+<pre><code>// Вытягиваем по 10 штук из базы, когда мы их все проходим, догружаем еще 10
+foreach((new \Batch(10, \user\models\User::model()))-&gt;findAll($criteria) as $item){
+    // В $item находится 10 обьектов
+}
+</code></pre>
+
+<p>```</p>
+
+<p>Each:
+```php</p>
+
+<pre><code>// Вытягиваем по 10 штук из базы, когда мы их все проходим, догружаем еще 10 отдельным запросом
+foreach((new \Batch(10, \user\models\User::model(), true))-&gt;findAll($criteria) as $item){
+    // В $item находится 1 обьект
+}
+</code></pre>
+
+<p>```</p>
+
+<p>Штука работает довольно медленно за счет того что делает несколько запросов к базе, но память экономит значительно.
+Сравнивая с обычным findAll из AR, который 3400 моих записей из реального проекта сожрал 94.5 mb в то время когда
+batch держал уровен в районе 18.5-19.5 mb (учитывая что batchSize, размер пакета, был равен 100).</p>
+
+<p>Если немного допилить AR для этих дел можно добится в уменьшения в раза два, но я пока не стал заморачиватся
+так как интерес был не в том.</p>
+
+<p>Заключение
+Получилось не плохо, хоть и мало применимо. Для данных большого размера априори плохо юзать AR, в
+yii2 ситуация улучшилась в разы (переключатель массив/обьект, перепиленый AR в котором гараздо удобней управлять данными).
+Но иногда бывают ситуации когда можно себе позволить использовать обьект AR для выборки и в несколько запросов, к примеру отчетов или выгрузки
+плоских таблиц. Во всяком случае это мой маленький эксперимент которым я хочу поделится.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Yii 2.0 Beta]]></title>
