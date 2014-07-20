@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Php, | Dutchakdev]]></title>
-  <link href="http://dutchakdev.github.io/blog/categories/php/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Java, | Dutchakdev]]></title>
+  <link href="http://dutchakdev.github.io/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
   <updated>2014-07-20T15:45:43+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
