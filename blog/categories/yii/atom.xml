@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Yii, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/yii/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-20T15:24:59+03:00</updated>
+  <updated>2014-07-20T15:25:48+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -43,6 +43,9 @@ use yii\db\Query;</p>
 
 <p>}
 ```</p>
+
+<!-- more -->
+
 
 <p>Конечно так красиво сделать не выйдет, да и вообще, не выйдет повторить всю суть,
 без значительных изминений в AR (новый, для версии 2 команда yii писала 2 года)

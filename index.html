@@ -158,59 +158,12 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Конечно так красиво сделать не выйдет, да и вообще, не выйдет повторить всю суть,
-без значительных изминений в AR (новый, для версии 2 команда yii писала 2 года)
-но поигратся было интересно.</p>
-
-<p>Посмотреть что получилось можно тут: <a href="https://github.com/dutchakdev/yii-batch">https://github.com/dutchakdev/yii-batch</a>
-Репозиторий еще не дооформил, нужно написать пару тестов и пример использования
-в демо проекте.</p>
-
-<p>Сам компонент (хоть он и больше хелпер-итератор) находится тут
-<a href="https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php">https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php</a></p>
-
-<p>Вышло у мен так:</p>
-
-<p>Batch:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// Вытягиваем по 10 штук из базы, когда мы их все проходим, догружаем еще 10</span>
-</span><span class='line'><span class="k">foreach</span><span class="p">((</span><span class="k">new</span> <span class="nx">\Batch</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">\user\models\User</span><span class="o">::</span><span class="na">model</span><span class="p">()))</span><span class="o">-&gt;</span><span class="na">findAll</span><span class="p">(</span><span class="nv">$criteria</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">){</span>
-</span><span class='line'>  <span class="c1">// В $item находится 10 обьектов</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Each:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="c1">// Вытягиваем по 10 штук из базы, когда мы их все проходим, догружаем еще 10 отдельным запросом</span>
-</span><span class='line'><span class="k">foreach</span><span class="p">((</span><span class="k">new</span> <span class="nx">\Batch</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">\user\models\User</span><span class="o">::</span><span class="na">model</span><span class="p">(),</span> <span class="k">true</span><span class="p">))</span><span class="o">-&gt;</span><span class="na">findAll</span><span class="p">(</span><span class="nv">$criteria</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">){</span>
-</span><span class='line'>  <span class="c1">// В $item находится 1 обьект</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Штука работает довольно медленно за счет того что делает несколько запросов к базе, но память экономит значительно.
-Сравнивая с обычным findAll из AR, который 3400 моих записей из реального проекта сожрал 94.5 mb в то время когда
-batch держал уровен в районе 18.5-19.5 mb (учитывая что batchSize, размер пакета, был равен 100).</p>
-
-<p>Если немного допилить AR для этих дел можно добится в уменьшения в раза два, но я пока не стал заморачиватся
-так как интерес был не в том.</p>
-
-<p>Заключение
-Получилось не плохо, хоть и мало применимо. Для данных большого размера априори плохо юзать AR, в
-yii2 ситуация улучшилась в разы (переключатель массив/обьект, перепиленый AR в котором гараздо удобней управлять данными).
-Но иногда бывают ситуации когда можно себе позволить использовать обьект AR для выборки и в несколько запросов, к примеру отчетов или выгрузки
-плоских таблиц. Во всяком случае это мой маленький эксперимент которым я хочу поделится.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/07/20/yii-batch/">Read on &rarr;</a>
+    </footer>
   
 
 

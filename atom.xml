@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-20T15:24:59+03:00</updated>
+  <updated>2014-07-20T15:25:48+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -48,6 +48,9 @@
 </span><span class='line'>    <span class="c1">// $users — массив из 10 строк</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
 
 
 <p>Конечно так красиво сделать не выйдет, да и вообще, не выйдет повторить всю суть,
