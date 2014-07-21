@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Yii, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/yii/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:43:50+03:00</updated>
+  <updated>2014-07-21T17:45:00+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -51,12 +51,12 @@ use yii\db\Query;</p>
 без значительных изминений в AR (новый, для версии 2 команда yii писала 2 года)
 но поигратся было интересно.</p>
 
-<p>Посмотреть что получилось можно тут: https://github.com/dutchakdev/yii-batch
+<p>Посмотреть что получилось можно тут: <a href="https://github.com/dutchakdev/yii-batch">https://github.com/dutchakdev/yii-batch</a>
 Репозиторий еще не дооформил, нужно написать пару тестов и пример использования
 в демо проекте.</p>
 
 <p>Сам компонент (хоть он и больше хелпер-итератор) находится тут
-https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php</p>
+<a href="https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php">https://github.com/dutchakdev/yii-batch/blob/master/protected/components/Batch.php</a></p>
 
 <p>Вышло у мен так:</p>
 
@@ -112,9 +112,9 @@ yii2 ситуация улучшилась в разы (переключател
 <script src="https://gist.github.com/dutchakdev/a13c478fc923be7d9ff9.js"></script>
 
 
-<p>--
+<p>&mdash;
 Для тех кто не знаком с homebrew (менеджер пакетов для macos) советую глянуть
-http://brew.sh/
+<a href="http://brew.sh/">http://brew.sh/</a>
 Штука значительно лучше портов (mac ports) за счет того что не устанавливает кучу лишнего и не нужного хлама
 при установке пакетов. Так же для нее очень просто оформлять свои пакеты, так же имеет очень
 большое количество готовых. Пакеты и сам homebrew напсан на ruby</p>
@@ -144,7 +144,7 @@ http://brew.sh/
 <li>Upgrading from Yii 1.1. Стоит отметить, что так как 2.0 переписан полностью, обновление не будет тривиальной задачей. Тем не менее, если вы работали с 1.1, вам будет намного проще потому как между 1.1 и 2.0 много общего.</li>
 <li>Как обновиться с альфы 2.0? Если вы обновляете альфу через Composer, стоит удалить всё, кроме .gitignore из директории vendor и запустить composer ещё раз. Сделать это необходимо лишь один раз и вам не придётся так поступать с каждым новым релизом. Полный список изменений, в том чисте и ломающих обратную совместимость, доступен в файле CHANGELOG.</li>
 <li>Как следить за разработкой 2.0? Вся разработка и обсуждения происходят на GitHub:</li>
-<li>https://github.com/yiisoft/yii2. Вы можете подписаться на обновления или поставить звёздочку чтобы получать уведомления об обновлениях. Также можно следить за нашим twitter https://twitter.com/yiiframework.</li>
+<li><a href="https://github.com/yiisoft/yii2.">https://github.com/yiisoft/yii2.</a> Вы можете подписаться на обновления или поставить звёздочку чтобы получать уведомления об обновлениях. Также можно следить за нашим twitter <a href="https://twitter.com/yiiframework.">https://twitter.com/yiiframework.</a></li>
 </ul>
 
 
@@ -240,7 +240,7 @@ http://brew.sh/
 <ul>
 <li>DbConnection емуляци nested транзацкий MySql и други баз данных которые не поддерживают это.</li>
 <li>DbCommand с фичами addWhere и queryAssoc</li>
-<li>Base ActiveRecord class. Реализация часто используемых функций - автоматическая установа полей дат в записи, установка нулевого значения, а не пустой строки.</li>
+<li>Base ActiveRecord class. Реализация часто используемых функций &ndash; автоматическая установа полей дат в записи, установка нулевого значения, а не пустой строки.</li>
 </ul>
 </li>
 <li>Power MultiSite компонент для работы с мультисайтами.</li>
@@ -252,8 +252,8 @@ http://brew.sh/
 
 
 <p>В целом штука крутая, только начал работать с ней, но мне уже нравится.
-Сама репа тут: https://github.com/sergebezborodov/malmo
-Приложение на мелмо: https://github.com/sergebezborodov/malmo-app</p>
+Сама репа тут: <a href="https://github.com/sergebezborodov/malmo">https://github.com/sergebezborodov/malmo</a>
+Приложение на мелмо: <a href="https://github.com/sergebezborodov/malmo-app">https://github.com/sergebezborodov/malmo-app</a></p>
 
 <p>(Запись востановлена со старого блога)</p>
 ]]></content>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Homebrew | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:43:50+03:00</updated>
+  <updated>2014-07-21T17:45:00+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -26,9 +26,9 @@
 <script src="https://gist.github.com/dutchakdev/a13c478fc923be7d9ff9.js"></script>
 
 
-<p>--
+<p>&mdash;
 Для тех кто не знаком с homebrew (менеджер пакетов для macos) советую глянуть
-http://brew.sh/
+<a href="http://brew.sh/">http://brew.sh/</a>
 Штука значительно лучше портов (mac ports) за счет того что не устанавливает кучу лишнего и не нужного хлама
 при установке пакетов. Так же для нее очень просто оформлять свои пакеты, так же имеет очень
 большое количество готовых. Пакеты и сам homebrew напсан на ruby</p>

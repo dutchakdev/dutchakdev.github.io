@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Devenv | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/devenv/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:43:50+03:00</updated>
+  <updated>2014-07-21T17:45:00+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -18,8 +18,8 @@
     <link href="http://dutchakdev.github.io/blog/2014/04/11/mac-os-x-mavericks-plus-ppfmn/"/>
     <updated>2014-04-11T00:14:20+03:00</updated>
     <id>http://dutchakdev.github.io/blog/2014/04/11/mac-os-x-mavericks-plus-ppfmn</id>
-    <content type="html"><![CDATA[<p>Норм статья, я тоже юзаю: http://habrahabr.ru/post/217245/
-Для тех кто занимается порно и юзает ports, ребята - не страдайте хуйней, http://brew.sh/ - решение для крутых чуваков.</p>
+    <content type="html"><![CDATA[<p>Норм статья, я тоже юзаю: <a href="http://habrahabr.ru/post/217245/">http://habrahabr.ru/post/217245/</a>
+Для тех кто занимается порно и юзает ports, ребята &ndash; не страдайте хуйней, <a href="http://brew.sh/">http://brew.sh/</a> &ndash; решение для крутых чуваков.</p>
 
 <p>Так же еще есть вариант установить сразу несколько версий php:</p>
 
@@ -47,7 +47,7 @@ brew link readline
 CFLAGS='-I/usr/local/include' LDFLAGS='-L/usr/local/lib' rvm install ree
 </code></p>
 
-<p>http://brew.sh/</p>
+<p><a href="http://brew.sh/">http://brew.sh/</a></p>
 ]]></content>
   </entry>
   
