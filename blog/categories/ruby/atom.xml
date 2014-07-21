@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-20T23:10:38+03:00</updated>
+  <updated>2014-07-21T17:43:50+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -23,6 +23,8 @@ brew install readline
 brew link readline
 CFLAGS='-I/usr/local/include' LDFLAGS='-L/usr/local/lib' rvm install ree
 </code></p>
+
+<p>http://brew.sh/</p>
 ]]></content>
   </entry>
   

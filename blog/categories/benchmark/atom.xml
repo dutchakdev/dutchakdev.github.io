@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Benchmark, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/benchmark/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-20T23:10:38+03:00</updated>
+  <updated>2014-07-21T17:43:50+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -101,7 +101,7 @@ Total:        223  259 178.0    232    2445</p>
 так к разным на основе списка.
 Паузы между запросами к серверу могут быть как произвольными в пределах заданного интервала, так и вовсе отсутствовать, позволяя таким образом выполнять тест производительности сервера.</p>
 
-<p>Главное отличие от <code>ab</code> это какразтаки умени &ldquo;симулировать&rdquo; реальное поведение при highload.</p>
+<p>Главное отличие от <code>ab</code> это какразтаки умени "симулировать" реальное поведение при highload.</p>
 
 <p>Выполним запрос 1000 раз, только теперь одновременно будем отправлять по 10 запросов за раз:</p>
 
@@ -133,7 +133,7 @@ Shortest transaction:         0.06</p>
 <p>FILE: /usr/local/var/siege.log
 You can disable this annoying message by editing
 the .siegerc file in your home directory; change
-the directive &lsquo;show-logfile&rsquo; to false.</p>
+the directive 'show-logfile' to false.</p>
 
 <p>$ cat /usr/local/var/siege.log
 Date &amp; Time              Trans       Elap Time       Data Trans   Resp Time   Trans Rate    Throughput   Concurrent     OKAY     Failed
