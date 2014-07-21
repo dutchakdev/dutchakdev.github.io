@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Yii, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/yii/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:45:52+03:00</updated>
+  <updated>2014-07-21T17:47:01+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -23,8 +23,66 @@
 <!-- more -->
 
 
-<script src="https://gist.github.com/dutchakdev/a13c478fc923be7d9ff9.js"></script>
+<p>```nginx</p>
 
+<h1>for install from homebrew</h1>
+
+<h1>&mdash;> brew install nagios</h1>
+
+<h1>must also be installed fcgiwrap</h1>
+
+<p>server {</p>
+
+<pre><code>listen   80;
+server_name  nagios.dev;
+
+access_log  /var/log/nginx/nagios.access.log;
+error_log   /var/log/nginx/nagios.error.log info;
+
+expires 31d;
+
+root /usr/local/Cellar/nagios/3.5.1_1/share/nagios/htdocs;
+index index.php index.html;
+
+
+
+location /nagios {
+    alias /usr/local/Cellar/nagios/3.5.1_1/share/nagios/htdocs;
+}
+
+location /stylesheets {
+    alias /usr/local/Cellar/nagios/3.5.1_1/share/nagios/htdocs/stylesheets;
+}
+
+location ~ \.cgi$ {
+
+    root /usr/local/Cellar/nagios/3.5.1_1/cgi-bin;
+
+    rewrite ^/nagios/cgi-bin/(.*)$ /$1;
+
+    include fastcgi_params;
+
+    fastcgi_param AUTH_USER $remote_user;
+    fastcgi_param REMOTE_USER $remote_user;
+    fastcgi_param SCRIPT_FILENAME  /usr/local/Cellar/nagios/3.5.1_1/cgi-bin$fastcgi_script_name;
+
+    fastcgi_pass 127.0.0.1:9001;
+}
+
+location ~ \.php$ {
+    fastcgi_pass  127.0.0.1:9000;
+    fastcgi_index index.php;
+    include fastcgi_params;
+    fastcgi_param  PHP_VALUE "upload_max_filesize=15M";
+    fastcgi_param   APPLICATION_ENV  dev;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param PATH_INFO $fastcgi_script_name;
+}
+</code></pre>
+
+<p>}</p>
+
+<p>```</p>
 
 <p>&mdash;
 Для тех кто не знаком с homebrew (менеджер пакетов для macos) советую глянуть
