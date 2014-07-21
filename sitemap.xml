@@ -83,10 +83,6 @@
         <lastmod>2014-04-14T21:26:58+03:00</lastmod>
     </url>
     <url>
-        <loc>http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew/</loc>
-        <lastmod>2014-07-21T17:43:11+03:00</lastmod>
-    </url>
-    <url>
         <loc>http://dutchakdev.github.io/blog/2014/07/20/yii-batch/</loc>
         <lastmod>2014-07-21T17:42:46+03:00</lastmod>
     </url>
@@ -95,16 +91,20 @@
         <lastmod>2014-07-20T15:45:33+03:00</lastmod>
     </url>
     <url>
+        <loc>http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew/</loc>
+        <lastmod>2014-07-21T17:45:45+03:00</lastmod>
+    </url>
+    <url>
         <loc>http://dutchakdev.github.io/about/</loc>
         <lastmod>2014-04-11T00:38:03+03:00</lastmod>
     </url>
     <url>
         <loc>http://dutchakdev.github.io/blog/archives/</loc>
-        <lastmod>2014-07-21T17:43:11+03:00</lastmod>
+        <lastmod>2014-07-21T17:45:45+03:00</lastmod>
     </url>
     <url>
         <loc>http://dutchakdev.github.io/</loc>
-        <lastmod>2014-07-21T17:43:11+03:00</lastmod>
+        <lastmod>2014-07-21T17:45:45+03:00</lastmod>
     </url>
     <url>
         <loc>http://dutchakdev.github.io/job/</loc>

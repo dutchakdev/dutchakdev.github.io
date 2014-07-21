@@ -4,7 +4,7 @@
   <title><![CDATA[Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:45:00+03:00</updated>
+  <updated>2014-07-21T17:45:52+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nagios + Nginx на Macos (конфиг для Nginx)]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew/"/>
+    <updated>2014-07-21T17:16:48+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew</id>
+    <content type="html"><![CDATA[<p>Конфиг для извращенцев. Так же нужно установить сам nagios + fcgiwrap</p>
+
+<!-- more -->
+
+
+<script src="https://gist.github.com/dutchakdev/a13c478fc923be7d9ff9.js"></script>
+
+
+<p>&mdash;
+Для тех кто не знаком с homebrew (менеджер пакетов для macos) советую глянуть
+<a href="http://brew.sh/">http://brew.sh/</a>
+Штука значительно лучше портов (mac ports) за счет того что не устанавливает кучу лишнего и не нужного хлама
+при установке пакетов. Так же для нее очень просто оформлять свои пакеты, так же имеет очень
+большое количество готовых. Пакеты и сам homebrew напсан на ruby</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Руководство по рефакторингу]]></title>
@@ -117,28 +139,6 @@ yii2 ситуация улучшилась в разы (переключател
 плоских таблиц. Во всяком случае это мой маленький эксперимент которым я хочу поделится.</p>
 
 <p>Так же скоро планирую написать нечто похожее на генераторах, есть несколько соображений.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nagios + Nginx на Macos (конфиг для Nginx)]]></title>
-    <link href="http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew/"/>
-    <updated>2014-07-20T11:16:48+03:00</updated>
-    <id>http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew</id>
-    <content type="html"><![CDATA[<p>Конфиг для извращенцев. Так же нужно установить сам nagios + fcgiwrap</p>
-
-<!-- more -->
-
-
-<script src="https://gist.github.com/dutchakdev/a13c478fc923be7d9ff9.js"></script>
-
-
-<p>&mdash;
-Для тех кто не знаком с homebrew (менеджер пакетов для macos) советую глянуть
-<a href="http://brew.sh/">http://brew.sh/</a>
-Штука значительно лучше портов (mac ports) за счет того что не устанавливает кучу лишнего и не нужного хлама
-при установке пакетов. Так же для нее очень просто оформлять свои пакеты, так же имеет очень
-большое количество готовых. Пакеты и сам homebrew напсан на ruby</p>
 ]]></content>
   </entry>
   

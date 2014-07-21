@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Php, | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:45:00+03:00</updated>
+  <updated>2014-07-21T17:45:52+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -14,21 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Руководство по рефакторингу]]></title>
-    <link href="http://dutchakdev.github.io/blog/2014/07/20/refactor/"/>
-    <updated>2014-07-20T15:16:48+03:00</updated>
-    <id>http://dutchakdev.github.io/blog/2014/07/20/refactor</id>
-    <content type="html"><![CDATA[<p><a href="http://refactoring.guru">Рефакторинг — это контролируемый процесс улучшения вашего кода, без написания новой функциональности.</a></p>
-
-<p>Всем рекомендую.</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Nagios + Nginx на Macos (конфиг для Nginx)]]></title>
-    <link href="http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew/"/>
-    <updated>2014-07-20T11:16:48+03:00</updated>
-    <id>http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew</id>
+    <link href="http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew/"/>
+    <updated>2014-07-21T17:16:48+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew</id>
     <content type="html"><![CDATA[<p>Конфиг для извращенцев. Так же нужно установить сам nagios + fcgiwrap</p>
 
 <!-- more -->
@@ -43,6 +32,17 @@
 Штука значительно лучше портов (mac ports) за счет того что не устанавливает кучу лишнего и не нужного хлама
 при установке пакетов. Так же для нее очень просто оформлять свои пакеты, так же имеет очень
 большое количество готовых. Пакеты и сам homebrew напсан на ruby</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Руководство по рефакторингу]]></title>
+    <link href="http://dutchakdev.github.io/blog/2014/07/20/refactor/"/>
+    <updated>2014-07-20T15:16:48+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/07/20/refactor</id>
+    <content type="html"><![CDATA[<p><a href="http://refactoring.guru">Рефакторинг — это контролируемый процесс улучшения вашего кода, без написания новой функциональности.</a></p>
+
+<p>Всем рекомендую.</p>
 ]]></content>
   </entry>
   

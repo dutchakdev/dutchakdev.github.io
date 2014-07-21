@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Homebrew | Dutchakdev]]></title>
   <link href="http://dutchakdev.github.io/blog/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://dutchakdev.github.io/"/>
-  <updated>2014-07-21T17:45:00+03:00</updated>
+  <updated>2014-07-21T17:45:52+03:00</updated>
   <id>http://dutchakdev.github.io/</id>
   <author>
     <name><![CDATA[Roman Dutchak]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Nagios + Nginx на Macos (конфиг для Nginx)]]></title>
-    <link href="http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew/"/>
-    <updated>2014-07-20T11:16:48+03:00</updated>
-    <id>http://dutchakdev.github.io/blog/2014/07/20/nagios-and-brew</id>
+    <link href="http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew/"/>
+    <updated>2014-07-21T17:16:48+03:00</updated>
+    <id>http://dutchakdev.github.io/blog/2014/07/21/nagios-and-brew</id>
     <content type="html"><![CDATA[<p>Конфиг для извращенцев. Так же нужно установить сам nagios + fcgiwrap</p>
 
 <!-- more -->
